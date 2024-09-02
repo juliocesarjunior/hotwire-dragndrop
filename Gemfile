@@ -86,3 +86,5 @@ group :rubocop do
   gem "rubocop-rails", "~> 2.20", require: false
   gem "rubocop-shopify", "~> 2.14", require: false
 end
+
+gem "ranked-model", "~> 0.4.10"

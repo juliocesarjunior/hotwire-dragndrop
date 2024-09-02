@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="max-w-screen-md mx-auto py-10">
+    <p style="color: green"><%= notice %></p>
+ 
+    <div class="mb-6">
+      <%= link_to "New course", new_course_path, class: "rounded border border-slate-500 px-2 py-3" %>
+    </div>
+ 
+    <h1 class="text-2xl font-medium mb-4">Courses</h1>
+ 
+    <div id="courses" class="flex flex-col gap-4" data-controller="sortable">
+      <%= render @courses %>
+    </div>
+  </div>
+</div>
