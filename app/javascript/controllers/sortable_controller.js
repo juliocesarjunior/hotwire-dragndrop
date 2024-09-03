@@ -3,9 +3,17 @@ import Sortable from "sortablejs"
 import { patch } from "@rails/request.js"
  
 export default class extends Controller {
+  static values = {
+    handleSelector: String,
+  }
+ 
   connect() {
     const options = {
-      onEnd: this.onEnd.bind(this)
+      onEnd: this.onEnd.bind(this),
+      ghostClass: "bg-red-300"
+    }
+    if (this.hasHandleSelectorValue) {
+      options.handle = this.handleSelectorValue
     }
     Sortable.create(this.element, options)
   }
